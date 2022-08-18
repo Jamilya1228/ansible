@@ -1,0 +1,9 @@
+---
+- name: installing httpd, opening port 80, starting and enabling, adding a user
+  hosts: webservers
+  become: true
+
+  roles: 
+    - http
+    - firewalld
+    - users
